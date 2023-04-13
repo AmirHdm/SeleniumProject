@@ -1,0 +1,2 @@
+The client is happy with the work you have been doing so far, but he is not happy with the Test Results generated. The test results are not user friendly.
+He wants you to use TestNg which has better Test reporting format.
