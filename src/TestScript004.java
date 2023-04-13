@@ -22,6 +22,7 @@ public class TestScript004 {
 	
 	@Test(dataProvider = "GuruTest")
 	public void testCase04(String username, String password) throws Exception {
+		//Sitting the webdriver parameters
 		System.setProperty("webdriver.firefox.driver","C:\\firefox\\geckodriver.exe");
 		Thread.sleep(2000);	
     	WebDriver driver = new FirefoxDriver();
