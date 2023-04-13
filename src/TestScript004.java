@@ -36,6 +36,7 @@ public class TestScript004 {
 		driver.findElement(By.name("password")).clear();
 		driver.findElement(By.name("password")).sendKeys(password);
 		driver.findElement(By.name("btnLogin")).click();
+		Thread.sleep(5000);
 	    try{ 
 	    
 	       	Alert alt = driver.switchTo().alert();
@@ -46,6 +47,8 @@ public class TestScript004 {
 	    catch (NoAlertPresentException Ex){ 
 	    	actualTitle = driver.getTitle();
 	    	assertEquals(actualTitle,KeysExternal.EXPECT_TITLE);
+	    	
+	    	
         }
 	    driver.manage().deleteAllCookies();
 		Thread.sleep(2000);
