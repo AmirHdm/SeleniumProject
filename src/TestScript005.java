@@ -36,7 +36,6 @@ public class TestScript005 {
         }
 	    driver.manage().deleteAllCookies();
 	    driver.close();
-	    
 	}
 	
 	@DataProvider(name = "loginData")
