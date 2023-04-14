@@ -13,5 +13,8 @@ public class KeysExternal {
 	//Correcte credentails
 	public static final String USER_NAME ="mngr493079";
 	public static final String USER_PASSWORD ="zeqehEn";
+	
+	public static final String PATTERN = ":";
+    
 
 }
