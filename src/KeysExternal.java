@@ -5,7 +5,7 @@ public class KeysExternal {
 	
 	// launch completely
 	public static final String BASE_URL = "http://www.demo.guru99.com/";
-	
+	//Test Merge issue
 	// Expected output
 	public static final String EXPECT_TITLE = "Guru99 Bank Manager HomePage";
 	public static final String EXPECT_ERROR = "User or Password is not valid";
