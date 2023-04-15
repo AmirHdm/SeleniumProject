@@ -2,6 +2,9 @@ import org.apache.poi.xssf.usermodel.*;
 
 
 import java.io.*;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Iterator;
 
 public class FunctExternal {
@@ -91,6 +94,14 @@ public class FunctExternal {
 		*/
 		return tabArray;
 	
+	}
+	// Generate New Folder name based on current Time
+	public static String GetFolderName( String Folder_PATH) {
+		LocalTime currentTime = LocalTime.now();
+		LocalDate currentDate = LocalDate.now();
+    	DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("_HH_mm_ss");
+    	DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("_yyyy_MM_dd_");
+		return Folder_PATH= Folder_PATH+currentDate.format(formatterDate)+currentTime.format(formatterTime)+"\\";
 	}
 	
 }

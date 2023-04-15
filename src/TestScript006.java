@@ -22,26 +22,21 @@ public class TestScript006 {
 	@BeforeTest
 	public void CreateSCFolder() {
 		
-		File folder = new File(GetFolderName(FolderPath));
+		File folder = new File(FunctExternal.GetFolderName(FolderPath));
         // Check if the folder already exists
         if (!folder.exists()) {
-        	FolderPath = GetFolderName(FolderPath);
+        	FolderPath = FunctExternal.GetFolderName(FolderPath);
             folder.mkdir();
-
-        } 
-        
+        }  
 	}
+	
 	@SuppressWarnings("deprecation")
 	@Test(dataProvider = "loginData")
 	public void testCase06(String username, String password) throws Exception {
 
-		//System.setProperty("webdriver.firefox.driver","C:\\firefox\\geckodriver.exe");
-		//Thread.sleep(2000);
 		FirefoxOptions options = new FirefoxOptions();
 	    options.setHeadless(true);
-	    // Create a new instance of the Firefox driver
 	    WebDriver driver = new FirefoxDriver(options);
-    	
 		String baseUrl = KeysExternal.BASE_URL;
 		driver.get(baseUrl + "/V4/");
 		Thread.sleep(500);
@@ -74,8 +69,9 @@ public class TestScript006 {
 	        } catch (IOException e) {
 	            System.out.println("Error saving screenshot: " + e.getMessage());
 	        }
-	        
+	         
 		} 
+		
 	    catch (NoAlertPresentException Ex){
 	    	
 	    	String pageText = driver.findElement(By.xpath("/html/body/table/tbody")).getText();
@@ -95,7 +91,9 @@ public class TestScript006 {
 	        } catch (IOException e) {
 	            System.out.println("Error saving screenshot: " + e.getMessage());
 	        }
+	        
         }
+		
 	    driver.manage().deleteAllCookies();
 	    driver.close();
 	}
@@ -105,25 +103,16 @@ public class TestScript006 {
 		
 		return new Object[][] {
             { KeysExternal.USER_NAME, KeysExternal.USER_PASSWORD },
-            
             { "invalid", "valid" },
-            
             { "valid", "invalid" },
             { "invalid", "invalid" },
-           
 			{ KeysExternal.USER_NAME, KeysExternal.USER_PASSWORD }
 			
     };
     }
 	
-	// Generate New Folder name based on current Time
-	public String GetFolderName( String Folder_PATH) {
-		LocalTime currentTime = LocalTime.now();
-		LocalDate currentDate = LocalDate.now();
-    	DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("_HH_mm_ss");
-    	DateTimeFormatter formatterDate = DateTimeFormatter.ofPattern("_yyyy_MM_dd_");
-		return Folder_PATH= Folder_PATH+currentDate.format(formatterDate)+currentTime.format(formatterTime)+"\\";
-	}
+	
+	
 	
 	
 	

@@ -5,8 +5,8 @@
     <classes>
       <class name="TestScript006">
         <methods>
-          <include name="testCase05"/>
           <include name="CreateSCFolder"/>
+          <include name="testCase06" invocation-numbers="0"/>
         </methods>
       </class> <!-- TestScript006 -->
     </classes>
