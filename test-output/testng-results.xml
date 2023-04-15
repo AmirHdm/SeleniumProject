@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-15T05:12:04 CEST" name="Default suite" finished-at="2023-04-15T05:17:31 CEST" duration-ms="326917">
+  <suite started-at="2023-04-15T06:06:56 CEST" name="Default suite" finished-at="2023-04-15T06:11:43 CEST" duration-ms="287796">
     <groups>
     </groups>
-    <test started-at="2023-04-15T05:12:04 CEST" name="Default test" finished-at="2023-04-15T05:17:31 CEST" duration-ms="326917">
+    <test started-at="2023-04-15T06:06:56 CEST" name="Default test" finished-at="2023-04-15T06:11:43 CEST" duration-ms="287796">
       <class name="TestScript006">
-        <test-method is-config="true" signature="CreateSCFolder()[pri:0, instance:TestScript006@3bb9a3ff]" started-at="2023-04-15T05:12:04 CEST" name="CreateSCFolder" finished-at="2023-04-15T05:12:04 CEST" duration-ms="266" status="PASS">
+        <test-method is-config="true" signature="CreateSCFolder()[pri:0, instance:TestScript006@3bb9a3ff]" started-at="2023-04-15T06:06:56 CEST" name="CreateSCFolder" finished-at="2023-04-15T06:06:56 CEST" duration-ms="234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateSCFolder -->
-        <test-method signature="testCase05(java.lang.String,java.lang.String)[pri:0, instance:TestScript006@3bb9a3ff]" started-at="2023-04-15T05:12:04 CEST" name="testCase05" data-provider="loginData" finished-at="2023-04-15T05:13:23 CEST" duration-ms="78613" status="PASS">
+        <test-method signature="testCase06(java.lang.String,java.lang.String)[pri:0, instance:TestScript006@3bb9a3ff]" started-at="2023-04-15T06:06:56 CEST" name="testCase06" data-provider="loginData" finished-at="2023-04-15T06:08:18 CEST" duration-ms="82095" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,8 +26,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase05 -->
-        <test-method signature="testCase05(java.lang.String,java.lang.String)[pri:0, instance:TestScript006@3bb9a3ff]" started-at="2023-04-15T05:13:23 CEST" name="testCase05" data-provider="loginData" finished-at="2023-04-15T05:14:22 CEST" duration-ms="59633" status="PASS">
+        </test-method> <!-- testCase06 -->
+        <test-method signature="testCase06(java.lang.String,java.lang.String)[pri:0, instance:TestScript006@3bb9a3ff]" started-at="2023-04-15T06:08:18 CEST" name="testCase06" data-provider="loginData" finished-at="2023-04-15T06:09:17 CEST" duration-ms="58302" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -42,8 +42,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase05 -->
-        <test-method signature="testCase05(java.lang.String,java.lang.String)[pri:0, instance:TestScript006@3bb9a3ff]" started-at="2023-04-15T05:14:22 CEST" name="testCase05" data-provider="loginData" finished-at="2023-04-15T05:15:23 CEST" duration-ms="60627" status="PASS">
+        </test-method> <!-- testCase06 -->
+        <test-method signature="testCase06(java.lang.String,java.lang.String)[pri:0, instance:TestScript006@3bb9a3ff]" started-at="2023-04-15T06:09:17 CEST" name="testCase06" data-provider="loginData" finished-at="2023-04-15T06:10:01 CEST" duration-ms="44858" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -58,8 +58,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase05 -->
-        <test-method signature="testCase05(java.lang.String,java.lang.String)[pri:0, instance:TestScript006@3bb9a3ff]" started-at="2023-04-15T05:15:23 CEST" name="testCase05" data-provider="loginData" finished-at="2023-04-15T05:16:22 CEST" duration-ms="59064" status="PASS">
+        </test-method> <!-- testCase06 -->
+        <test-method signature="testCase06(java.lang.String,java.lang.String)[pri:0, instance:TestScript006@3bb9a3ff]" started-at="2023-04-15T06:10:01 CEST" name="testCase06" data-provider="loginData" finished-at="2023-04-15T06:10:51 CEST" duration-ms="49685" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -74,8 +74,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase05 -->
-        <test-method signature="testCase05(java.lang.String,java.lang.String)[pri:0, instance:TestScript006@3bb9a3ff]" started-at="2023-04-15T05:16:22 CEST" name="testCase05" data-provider="loginData" finished-at="2023-04-15T05:17:31 CEST" duration-ms="68335" status="PASS">
+        </test-method> <!-- testCase06 -->
+        <test-method signature="testCase06(java.lang.String,java.lang.String)[pri:0, instance:TestScript006@3bb9a3ff]" started-at="2023-04-15T06:10:51 CEST" name="testCase06" data-provider="loginData" finished-at="2023-04-15T06:11:43 CEST" duration-ms="52251" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -90,7 +90,7 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase05 -->
+        </test-method> <!-- testCase06 -->
       </class> <!-- TestScript006 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

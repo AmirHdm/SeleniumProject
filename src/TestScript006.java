@@ -13,6 +13,9 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
+
+import org.openqa.selenium.firefox.FirefoxOptions;
+
 public class TestScript006 {
 	
 	public String FolderPath = "C:\\Users\\Amir\\eclipse-workspace\\TestNGSample\\test-output\\TestScreenShot\\TestExecution";
@@ -28,22 +31,27 @@ public class TestScript006 {
         } 
         
 	}
+	@SuppressWarnings("deprecation")
 	@Test(dataProvider = "loginData")
-	public void testCase05(String username, String password) throws Exception {
+	public void testCase06(String username, String password) throws Exception {
 
-		System.setProperty("webdriver.firefox.driver","C:\\firefox\\geckodriver.exe");
-		Thread.sleep(2000);	
-    	WebDriver driver = new FirefoxDriver();
+		//System.setProperty("webdriver.firefox.driver","C:\\firefox\\geckodriver.exe");
+		//Thread.sleep(2000);
+		FirefoxOptions options = new FirefoxOptions();
+	    options.setHeadless(true);
+	    // Create a new instance of the Firefox driver
+	    WebDriver driver = new FirefoxDriver(options);
+    	
 		String baseUrl = KeysExternal.BASE_URL;
 		driver.get(baseUrl + "/V4/");
-		Thread.sleep(2000);
+		Thread.sleep(500);
 		String actualBoxMsg;
 		driver.findElement(By.name("uid")).clear();
 		driver.findElement(By.name("uid")).sendKeys(username);
 		driver.findElement(By.name("password")).clear();
 		driver.findElement(By.name("password")).sendKeys(password);
 		driver.findElement(By.name("btnLogin")).click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		LocalTime currentTime = LocalTime.now();
 		DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("_HH_mm_ss");
 		
@@ -73,7 +81,7 @@ public class TestScript006 {
 	    	String pageText = driver.findElement(By.xpath("/html/body/table/tbody")).getText();
 			assertTrue(pageText.contains(username.substring(0, 4)));
 			assertTrue(pageText.contains(username.substring(4)));
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			
 			// Take the screenshot
 	        File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -88,8 +96,6 @@ public class TestScript006 {
 	            System.out.println("Error saving screenshot: " + e.getMessage());
 	        }
         }
-		
-		 Thread.sleep(1000);
 	    driver.manage().deleteAllCookies();
 	    driver.close();
 	}
